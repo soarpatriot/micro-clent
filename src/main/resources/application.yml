@@ -1,0 +1,33 @@
+spring:
+
+  application:
+    name: client
+
+  #boot:
+  #  admin:
+  #    context-path: /admin
+
+  jackson:
+    serialization:
+      indent_output: true
+endpoints:
+    health:
+      sensitive: false
+server:
+  port: ${PORT:8888}
+
+
+
+
+
+eureka:
+
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+logging:
+    level:
+        org.springframework: 'OFF'
+        com.xiaojiuwo.models.mapper: 'DEBUG'
+
+
